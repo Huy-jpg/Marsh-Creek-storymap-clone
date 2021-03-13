@@ -1,0 +1,410 @@
+/*
+What needs to be done:
+- Functions and screen sizes
+*/
+
+$animtion-time: 1.5s;
+$text-color: rgb(114, 114, 114);
+$background: rgb(242, 246, 237);
+$line-height: 1.5em;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html{
+  font-family: 'Poppins', sans-serif;
+  background-color: $background;
+  // overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+p{
+  line-height: $line-height;
+  color: $text-color;
+  letter-spacing: .02em;
+}
+
+.opening{
+  height: 100vh;
+  background: url("/img/header-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 50%;
+  position: relative;
+  color: white;
+  z-index: 1;
+  
+  &::after{
+    content: '';
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .6));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+// Header
+.header-position{
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+}
+.big-txt{
+  font-size: 2.8rem;
+}
+.description{
+  margin: 2em 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+.credit{
+  font-weight: bolder;
+  color: #fff;
+}
+
+// Bottom Animation
+.arrow-animation{
+  min-height: 50px;
+  width: auto;
+  margin-top: 1.5em;
+}
+.line, .triangle{
+  position: absolute;
+}
+.line{
+  background: white;
+  height: 0;
+  width: 1px;
+  left: 1.7%;
+  animation: change-height $animtion-time ease-out infinite;
+}
+.triangle{
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  bottom: 15%;
+  left: 0;
+  animation: distance-travel $animtion-time ease-out infinite;
+}
+
+// Animation
+@keyframes change-height{
+  0%{
+    height: 0;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    height: 43px;
+    opacity: 0;
+  }
+}
+
+@keyframes distance-travel{
+  0%{
+    bottom: 15%;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+// Navigation Bar
+.navigation-bar{
+  background: rgb(232, 236, 227);
+  min-height: 3em;
+  top: .3%;
+  position: sticky;
+  box-shadow: 0 5px 20px rgb(156, 156, 156);
+}
+.nav-list{
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  width: 100%;
+  overflow-x: scroll;
+  margin: 2em 0;
+  white-space: nowrap;
+}
+// -----Scrollbar
+::-webkit-scrollbar{
+  height: 8px;
+  width: 8px;;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgba(78, 135, 102, .4);
+  border-radius: 5px;
+}
+.links{
+  padding: 1em 1.6em;
+  
+  a{
+    font-size: .9rem;
+    color: $text-color;
+    text-decoration: none;
+    padding: .3em 0;
+
+    &:hover{
+      border-bottom: 2px solid rgb(49, 184, 113);
+    }
+  }
+}
+
+// Overall Characteristics
+.overall-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+}
+.image{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em 0 3em 0;
+}
+.location{
+  width: 90%;
+}
+.loc-description{
+  width: 90%;
+  text-align: left;
+  margin: 1em 0 0 0;
+  font-size: .8rem;
+  color: rgb(129, 129, 129)
+}
+.overall{
+  width: 90%;
+}
+.overall-character{
+  font-size: 1.6rem;
+  margin-bottom: .8em;
+}
+.character-paragraph{
+  color: rgb(114, 114, 114);
+  margin-bottom: 4em;
+}
+
+// Contribution
+.contributions, .water-flow{
+  max-width: 100vw;
+}
+.stream-loc, .water-ways{
+  width: 100%;
+}
+.contribute-info, .water-flow-info{
+  margin: 3em 0 3em 1em;
+}
+.creeks, .answer{
+  margin-top: 1.2em;
+}
+
+// Water Flows
+.subhead{
+  margin: 1.3em 0 1em 0;
+}
+
+// Tap water
+.tap-water{
+  @extend .overall-box;
+  justify-items: center;
+}
+.water-image{
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.tap-water-diagram{
+  width: 100%;
+}
+.water-flow-credit{
+  font-size: .8rem;
+  margin: .2em 0 1.5em 0;
+}
+.info{
+  margin: 2em 0 1.5em .5em;
+}
+.tap-head, .tap-credit{
+  margin-bottom: 1em;
+}
+
+// Waterhsed cycle
+.watershed-cycle{
+  margin: 6em 0;
+}
+.cycle-diagram{
+  width: 90vw;
+  margin: 2em auto;
+}
+.cycle{
+  width: 100%;
+}
+.cycle-info{
+  margin: 1.2em 0 0 .5em;
+}
+.first-prt{
+  margin: 1.5em 0;
+}
+.second-prt{
+  margin: 12em 0 2em 0;
+}
+
+// Human Impact
+.impact{
+  margin: 0 0 1em .7em;
+}
+.non-point-container, .point-source-container, .sediment-container{
+  width: 90vw;
+  margin: auto;
+}
+.non-point-diagram, .point-source-diagram, .sediment-diagram{
+  width: 100%;
+}
+.non-point-info, .point-source-info, .sediment-info{
+  margin: 3em 0 3em .5em;
+}
+.non-point-head, .point-source-head, .sediment-head{
+  margin-bottom: 1em;
+}
+
+// Physical Model
+.physical-head{
+  margin: 3em 0 2em 1.2em;
+  
+  h3{
+    margin: 2em 0;
+  }
+}
+.physical-model-container{
+  width: 90vw;
+  margin: auto;
+}
+.physical-model-diagram{
+  width: 100%;
+}
+.model-credit{
+  font-size: .8rem;
+  a{
+    color: $text-color;
+    text-decoration: none;
+    border-bottom: 2px solid rgb(49, 184, 113);
+  }
+}
+.physical-model-info{
+  margin: 2em 0 0 1.2em;
+}
+.physical-steps{
+  margin-top: 2em;
+  padding: 0 1em 0 1.2em;
+  line-height: $line-height;
+  color: $text-color;
+}
+
+
+// Bigger screens
+@media (min-width: 950px){
+  .header-position{
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .arrow-animation{
+    width: 90vw;
+  }
+  .line{
+    left: .8%;
+  }
+
+  // Contributions & water flow
+  .contributions, .water-flow{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    align-items: center;
+    grid-template-areas: "a b";
+    margin: 3em 0;
+  }
+  .contribute-info, .water-flow-info{
+    grid-area: a;
+  }
+  .stream-loc, .water-ways{
+    min-height: 100vh;
+    grid-area: b;
+  }
+  .watershed-cycle{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    align-items: center;
+    grid-template-areas: "left right";
+  }
+  .cycle-diagram{
+    width: 95%;
+    grid-area: right;
+    grid-row: 1 / -1;
+  }
+  .cycle-info{
+    grid-area: left;
+  }
+  .non-point-info, .point-source-info, .sediment-info, .physical-model-info{
+    max-width: 90vw;
+    margin: 5em auto;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 949px), (min-width: 949px){
+  h1, h2, .overall-character{
+    font-size: 2rem;
+  }
+  h3{
+    font-size: 1.4rem;
+  }
+  p, .links a, .model-credit, li{
+    font-size: 1.2rem;
+  }
+  // Overall characteristics
+  .overall{
+    margin-top: 4.8em;
+  }
+  .stream-loc, .water-ways{
+    max-height: 30vh;
+  }
+  .water-ways{
+    object-fit: contain;
+  }
+  .contribute-info, .water-flow-info{
+    margin-bottom: 10em;
+  }
+  .water-image{
+    width: 95%;
+  }
+  .cycle-diagram{
+    width: 95%;
+  }
+}
+
+@media (min-width: 1050px){
+  .line{
+    left: 0.6%;
+  }
+  .water-flow, .contributions, .overall-box, .watershed-cycle{
+    grid-template-columns: repeat(2, minmax(500px, 1fr));
+  }
+  .non-point-container, .point-source-container, .sediment-container, .physical-model-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .non-point-diagram, .point-source-diagram, .sediment-diagram, .physical-model-diagram{
+    width: 70%;
+  }
+}

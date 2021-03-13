@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Map Clone</title>
+</head>
+<body>
+  <div class="container">
+    <header class="opening">
+      <div class="header-position">
+        <h1 class="big-txt"> Marsh Creek Watershed</h1>
+        <p class="description">Step into something new</p>
+        <p class="credit">Hoang B, Tri M, Bryan B, Timothy D</p>
+
+        <div class="arrow-animation">
+          <a href="#nav-bar">
+            <div class="line"></div>
+            <div class="triangle"></div>
+          </a>
+        </div>
+      </div>
+    </header>
+<!-- Navigation bar -->
+    <div class="navigation-bar">
+      <nav class="nav" id="nav-bar">
+        <ul class="nav-list">
+          <li class="links"><a href="#overall_character">Overall Characteristic</a></li>
+          <li class="links"><a href="#contribution">Contributions</a></li>
+          <li class="links"><a href="#water_flow">Water Flow</a></li>
+          <li class="links"><a href="#tap_water">Tap water</a></li>
+          <li class="links"><a href="#water_cycle">Water Cycle</a></li>
+          <li class="links"><a href="#human_impact">Human Impact</a></li>
+          <li class="links"><a href="#physical_model">Physical Model</a></li>
+        </ul>
+      </nav>
+    </div>
+
+<!-- Main Content -->
+    <main>
+      <div class="content">
+        <!-- Overall Characteristics -->
+        <section class="overall-box" id="overall_character">
+          <div class="image">
+            <img src="/img/location.jpg" alt="Marsh Creek Loaction" class="location">
+            <p class="loc-description">Marsh Creek Watershed</p>
+          </div>
+
+          <div class="overall">
+            <h2 class="overall-character">Overall Characteristic</h2>
+            <p class="character-paragraph">The Marsh Creek Watershed encompasses around 227 km². Located in East Contra Costa County, which rises on the eastern side of Mount Diablo and flows 30 miles (48 km) to the Sacramento-San Joaquin river.
+              <br><br>
+            Length in agricultural areas = 12.67 km
+            <br> 
+            Length in non-agricultural areas = 232.84 km.</p>
+          </div>
+        </section>
+
+        <!-- Contributions & Water Flows -->
+        <section class="contribute_waterflow">
+          <!-- Stream Contributions -->
+          <div class="contributions" id="contribution">
+            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fevpkjTri-YMcnKxeRs-GdS7YK1p6lJu" width="640" height="480" class="stream-loc"></iframe>
+            <div class="contribute-info">
+              <h2 class="contribute-header">Contributions</h2>
+              <p class="creeks">Curry Creek, Perkins Creek, Sycamore Creek, and Briones Creek are the main creeks that contributed to Marsh Creek Watershed.</p>
+            </div>
+          </div>
+          <!-- Water flows -->
+          <div class="water-flow" id="water_flow">
+            <img src="./img/water-way.jpg" alt="Water Flows" class="water-ways">
+            <div class="water-flow-info">
+              <h2 class="water-flow-header">Water Flows</h2>
+              <h3 class="subhead">How does water enter a waterhsed?</h3>
+              <p class="answer">Water enters the watershed by Precipitation, infiltrate into the ground, then flow through the ground to get to the nearest streams. </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tap water -->
+        <section class="tap-water" id="tap_water">
+          <div class="water-image">
+            <img src="./img/tap_water.png" alt="How water enters your home diagram" class="tap-water-diagram">
+            <p class="water-flow-credit">Water Flow diagram</p>
+          </div>
+
+          <div class="info">
+            <h2 class="tap-head">Tap Water</h2>
+            <h3 class="tap-credit">How does water enters your home?</h3>
+            <p class="tap-description">
+              1 way to get water to our home is through pumping.
+              <br><br>
+              The water infiltrates into the ground. It then is pumped back to the surface from stations called "Pumping stations." the water then will be treated (filtered) into potable (drinkable) water then into your home.</p>
+          </div>
+        </section>
+
+        <!-- Watershed Cycle -->
+        <section class="watershed-cycle" id="water_cycle">
+          <div class="cycle-diagram"> 
+            <img src="./img/watercycle.jpg" alt="Watershed Cycle" class="cycle">
+          </div>
+          <div class="cycle-info">
+            <h2>Watershed Cycle</h2>
+            <p class="cycle-desc first-prt">Water that comes from rain or snow will infiltrate into the ground (groundwater), flow into the nearest stream. The groundwater then be pumped back up from Pumping stations, it then be treated (filtered) into potable (drinkable) water and saved to an elevated storage tank (water tower) or a reservoir for later use.</p>
+
+            <p class="second-prt">Wastewater from your home will go through a series of pipes system into water treatment plants where it will be filtered, then release into rivers, lakes, etc.</p>
+            <br><br>
+
+            <p class="third-prt">The cycle then happens again, water from rivers, lakes..., infiltrate into the ground, pumping stations will pump that water back up, filter it then save it for later use. Wastewater from your home will then released into rivers, lakes, etc... through series of filtering.</p>
+          </div>
+        </section>
+
+        <!-- Human Impact -->
+        <section class="human-impact" id="human_impact">
+          <h2 class="impact">Human Impact</h2>
+          <!-- Non-point source pollution -->
+          <div class="non-point">
+            <div class="non-point-container">
+              <img src="./img/non-point.png" alt="Non-point Source Pollution diagram" class="non-point-diagram">
+              <p class="non-point-credit">non-point source pollution</p>
+            </div>
+            <!-- non-point paragraph -->
+            <div class="non-point-info">
+              <h3 class="non-point-head">Non-point source pollution</h3>
+              <p class="non-point-discription">Non-point source pollution is a type of pollution created by varieties of sources, it consists of excess fertilizers, oil, toxic chemicals, etc. This causes water quality problems and can affect drinking water and wild lives. </p>
+            </div>
+          </div>
+          <!-- Point source pollution -->
+          <div class="point-source">
+            <div class="point-source-container">
+              <img src="./img/point source.jpg" alt="Point Source Pollution" class="point-source-diagram">
+              <p>Point source pollution</p>
+            </div>
+            <!-- Point source paragraph -->
+            <div class="point-source-info">
+              <h3 class="point-source-head">Point Source Pollution</h3>
+              <p class="point-source-description">
+                Point source pollution is pollution that is from a single identifiable source from which pollutants are discharged.
+                <br><br>
+                Factories and Water treatment plants are two common examples of point source pollution. Some factories discharge their effluents straight into water bodies while others treat it before it is released. This can cause severe damage to human health and wild lives health.
+              </p>
+            </div>
+          </div>
+          <!-- Sediment -->
+          <div class="sediment">
+            <div class="sediment-container">
+              <img src="./img/sediment.gif" alt="Sediment Pollution" class="sediment-diagram">
+              <p>Sediments pollution</p>
+            </div>
+            <div class="sediment-info">
+              <h3 class="sediment-head">Sediments Pollution</h3>
+              <p class="sediment-description">Sediment is the loose sands, clays, and other particles that settle (sink) at the bottom of the water bodies. Water flows, winds help carry these particles into lakes, rivers, and streams. 
+                <br><br>
+              Since these sediments sink to the bottom of the water, it makes the water much clearer. But too much of it can increase the cost of treating drinking water. It can also clog fishes' gills, reduce resistance to diseases and reproductions. Water bodies that are polluted with sediments become cloudy, preventing animals from seeing their food.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Physical Model -->
+        <section class="physical-model" id="physical_model">
+          <div class="physical-head">
+            <h2>Physical Model</h2>
+            <h3>Applying into a physical model</h3>
+          </div>
+          <!-- Physical Diagram -->
+          <div class="physical-model-container">
+            <img src="./img/physical_model.png" alt="Physical Model" class="physical-model-diagram">
+            <p class="model-credit">Physical model diagram. Credit: <a href="https://www.linkedin.com/in/bryan-bejarano-2160551ab/" target="blank">Bryan B</a></p>
+          </div>
+
+          <div class="physical-model-info">
+            <p>Our physical model of a watershed represents the watershed's cycle. As you can see:</p>
+            <ol class="physical-steps">
+              <li>Water enters the watershed through rains and snow.</li>
+              <li>The water flows to the nearest stream and infiltrate.</li>
+              <li>Pumping stations pump the water back up, filter it then distribute it to homes.</li>
+              <li>As other rains come in cities, it creates surface runoff and find their way to a sewer, to the water treatment plants. After series of filtering, the water finally gets release back into lakes, streams, etc.</li>
+            </ol>
+          </div>
+        </section>
+
+      </div>
+    </main>
+    <div style="height: 100vh;"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,500 @@
+/*
+What needs to be done:
+- Functions and screen sizes
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f6ed;
+  scroll-behavior: smooth;
+}
+
+p {
+  line-height: 1.5em;
+  color: #727272;
+  letter-spacing: .02em;
+}
+
+.opening {
+  height: 100vh;
+  background: url("/img/header-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 50%;
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.opening::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header-position {
+  position: absolute;
+  bottom: 2%;
+  left: 5%;
+}
+
+.big-txt {
+  font-size: 2.8rem;
+}
+
+.description {
+  margin: 2em 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.credit {
+  font-weight: bolder;
+  color: #fff;
+}
+
+.arrow-animation {
+  min-height: 50px;
+  width: auto;
+  margin-top: 1.5em;
+}
+
+.line, .triangle {
+  position: absolute;
+}
+
+.line {
+  background: white;
+  height: 0;
+  width: 1px;
+  left: 1.7%;
+  -webkit-animation: change-height 1.5s ease-out infinite;
+          animation: change-height 1.5s ease-out infinite;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fff;
+  bottom: 15%;
+  left: 0;
+  -webkit-animation: distance-travel 1.5s ease-out infinite;
+          animation: distance-travel 1.5s ease-out infinite;
+}
+
+@-webkit-keyframes change-height {
+  0% {
+    height: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    height: 43px;
+    opacity: 0;
+  }
+}
+
+@keyframes change-height {
+  0% {
+    height: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    height: 43px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes distance-travel {
+  0% {
+    bottom: 15%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes distance-travel {
+  0% {
+    bottom: 15%;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.navigation-bar {
+  background: #e8ece3;
+  min-height: 3em;
+  top: .3%;
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-box-shadow: 0 5px 20px #9c9c9c;
+          box-shadow: 0 5px 20px #9c9c9c;
+}
+
+.nav-list {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  width: 100%;
+  overflow-x: scroll;
+  margin: 2em 0;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(78, 135, 102, 0.4);
+  border-radius: 5px;
+}
+
+.links {
+  padding: 1em 1.6em;
+}
+
+.links a {
+  font-size: .9rem;
+  color: #727272;
+  text-decoration: none;
+  padding: .3em 0;
+}
+
+.links a:hover {
+  border-bottom: 2px solid #31b871;
+}
+
+.overall-box, .tap-water {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  justify-items: center;
+}
+
+.image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4em 0 3em 0;
+}
+
+.location {
+  width: 90%;
+}
+
+.loc-description {
+  width: 90%;
+  text-align: left;
+  margin: 1em 0 0 0;
+  font-size: .8rem;
+  color: #818181;
+}
+
+.overall {
+  width: 90%;
+}
+
+.overall-character {
+  font-size: 1.6rem;
+  margin-bottom: .8em;
+}
+
+.character-paragraph {
+  color: #727272;
+  margin-bottom: 4em;
+}
+
+.contributions, .water-flow {
+  max-width: 100vw;
+}
+
+.stream-loc, .water-ways {
+  width: 100%;
+}
+
+.contribute-info, .water-flow-info {
+  margin: 3em 0 3em 1em;
+}
+
+.creeks, .answer {
+  margin-top: 1.2em;
+}
+
+.subhead {
+  margin: 1.3em 0 1em 0;
+}
+
+.tap-water {
+  justify-items: center;
+}
+
+.water-image {
+  width: 95vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+.tap-water-diagram {
+  width: 100%;
+}
+
+.water-flow-credit {
+  font-size: .8rem;
+  margin: .2em 0 1.5em 0;
+}
+
+.info {
+  margin: 2em 0 1.5em .5em;
+}
+
+.tap-head, .tap-credit {
+  margin-bottom: 1em;
+}
+
+.watershed-cycle {
+  margin: 6em 0;
+}
+
+.cycle-diagram {
+  width: 90vw;
+  margin: 2em auto;
+}
+
+.cycle {
+  width: 100%;
+}
+
+.cycle-info {
+  margin: 1.2em 0 0 .5em;
+}
+
+.first-prt {
+  margin: 1.5em 0;
+}
+
+.second-prt {
+  margin: 12em 0 2em 0;
+}
+
+.impact {
+  margin: 0 0 1em .7em;
+}
+
+.non-point-container, .point-source-container, .sediment-container {
+  width: 90vw;
+  margin: auto;
+}
+
+.non-point-diagram, .point-source-diagram, .sediment-diagram {
+  width: 100%;
+}
+
+.non-point-info, .point-source-info, .sediment-info {
+  margin: 3em 0 3em .5em;
+}
+
+.non-point-head, .point-source-head, .sediment-head {
+  margin-bottom: 1em;
+}
+
+.physical-head {
+  margin: 3em 0 2em 1.2em;
+}
+
+.physical-head h3 {
+  margin: 2em 0;
+}
+
+.physical-model-container {
+  width: 90vw;
+  margin: auto;
+}
+
+.physical-model-diagram {
+  width: 100%;
+}
+
+.model-credit {
+  font-size: .8rem;
+}
+
+.model-credit a {
+  color: #727272;
+  text-decoration: none;
+  border-bottom: 2px solid #31b871;
+}
+
+.physical-model-info {
+  margin: 2em 0 0 1.2em;
+}
+
+.physical-steps {
+  margin-top: 2em;
+  padding: 0 1em 0 1.2em;
+  line-height: 1.5em;
+  color: #727272;
+}
+
+@media (min-width: 950px) {
+  .header-position {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+  }
+  .arrow-animation {
+    width: 90vw;
+  }
+  .line {
+    left: .8%;
+  }
+  .contributions, .water-flow {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(450px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "a b";
+    margin: 3em 0;
+  }
+  .contribute-info, .water-flow-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: a;
+  }
+  .stream-loc, .water-ways {
+    min-height: 100vh;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: b;
+  }
+  .watershed-cycle {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+        grid-template-areas: "left right";
+  }
+  .cycle-diagram {
+    width: 95%;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: right;
+    grid-row: 1 / -1;
+  }
+  .cycle-info {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: left;
+  }
+  .non-point-info, .point-source-info, .sediment-info, .physical-model-info {
+    max-width: 90vw;
+    margin: 5em auto;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 949px), (min-width: 949px) {
+  h1, h2, .overall-character {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  p, .links a, .model-credit, li {
+    font-size: 1.2rem;
+  }
+  .overall {
+    margin-top: 4.8em;
+  }
+  .stream-loc, .water-ways {
+    max-height: 30vh;
+  }
+  .water-ways {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .contribute-info, .water-flow-info {
+    margin-bottom: 10em;
+  }
+  .water-image {
+    width: 95%;
+  }
+  .cycle-diagram {
+    width: 95%;
+  }
+}
+
+@media (min-width: 1050px) {
+  .line {
+    left: 0.6%;
+  }
+  .water-flow, .contributions, .overall-box, .tap-water, .watershed-cycle {
+    -ms-grid-columns: (minmax(500px, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(500px, 1fr));
+  }
+  .non-point-container, .point-source-container, .sediment-container, .physical-model-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .non-point-diagram, .point-source-diagram, .sediment-diagram, .physical-model-diagram {
+    width: 70%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
