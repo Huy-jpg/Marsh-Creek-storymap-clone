@@ -12,6 +12,7 @@ What needs to be done:
 body, html {
   font-family: 'Poppins', sans-serif;
   background-color: #f2f6ed;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -19,6 +20,20 @@ p {
   line-height: 1.5em;
   color: #727272;
   letter-spacing: .02em;
+}
+
+.stream-loc, .water-ways, .tap-water-diagram, .cycle, .non-point-diagram, .point-source-diagram, .sediment-diagram, .physical-model-diagram {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(78, 135, 102, 0.4);
+  border-radius: 5px;
 }
 
 .opening {
@@ -168,16 +183,6 @@ p {
   white-space: nowrap;
 }
 
-::-webkit-scrollbar {
-  height: 8px;
-  width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(78, 135, 102, 0.4);
-  border-radius: 5px;
-}
-
 .links {
   padding: 1em 1.6em;
 }
@@ -245,10 +250,6 @@ p {
   max-width: 100vw;
 }
 
-.stream-loc, .water-ways {
-  width: 100%;
-}
-
 .contribute-info, .water-flow-info {
   margin: 3em 0 3em 1em;
 }
@@ -277,10 +278,6 @@ p {
   margin: auto;
 }
 
-.tap-water-diagram {
-  width: 100%;
-}
-
 .water-flow-credit {
   font-size: .8rem;
   margin: .2em 0 1.5em 0;
@@ -301,10 +298,6 @@ p {
 .cycle-diagram {
   width: 90vw;
   margin: 2em auto;
-}
-
-.cycle {
-  width: 100%;
 }
 
 .cycle-info {
@@ -328,10 +321,6 @@ p {
   margin: auto;
 }
 
-.non-point-diagram, .point-source-diagram, .sediment-diagram {
-  width: 100%;
-}
-
 .non-point-info, .point-source-info, .sediment-info {
   margin: 3em 0 3em .5em;
 }
@@ -351,10 +340,6 @@ p {
 .physical-model-container {
   width: 90vw;
   margin: auto;
-}
-
-.physical-model-diagram {
-  width: 100%;
 }
 
 .model-credit {
