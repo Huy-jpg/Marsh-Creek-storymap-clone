@@ -17,7 +17,6 @@ $line-height: 1.5em;
 body, html{
   font-family: 'Poppins', sans-serif;
   background-color: $background;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 // Default styles
@@ -136,11 +135,12 @@ p{
 
 // Navigation Bar
 .navigation-bar{
-  background: rgb(232, 236, 227);
-  min-height: 3em;
   top: .3%;
   position: sticky;
+  min-height: 3em;
+  background: rgb(232, 236, 227);
   box-shadow: 0 5px 20px rgb(156, 156, 156);
+  z-index: 9999;
 }
 .nav-list{
   display: grid;
@@ -359,7 +359,7 @@ p{
   h3{
     font-size: 1.4rem;
   }
-  p, .links a, .model-credit, li{
+  p, li{
     font-size: 1.2rem;
   }
   // Overall characteristics
@@ -384,6 +384,9 @@ p{
 }
 
 @media (min-width: 1050px){
+  .model-credit, .links a{
+    font-size: 1.2rem;
+  }
   .line{
     left: 0.6%;
   }

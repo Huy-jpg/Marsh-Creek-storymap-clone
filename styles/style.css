@@ -12,7 +12,6 @@ What needs to be done:
 body, html {
   font-family: 'Poppins', sans-serif;
   background-color: #f2f6ed;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -163,13 +162,14 @@ p {
 }
 
 .navigation-bar {
-  background: #e8ece3;
-  min-height: 3em;
   top: .3%;
   position: -webkit-sticky;
   position: sticky;
+  min-height: 3em;
+  background: #e8ece3;
   -webkit-box-shadow: 0 5px 20px #9c9c9c;
           box-shadow: 0 5px 20px #9c9c9c;
+  z-index: 9999;
 }
 
 .nav-list {
@@ -434,7 +434,7 @@ p {
   h3 {
     font-size: 1.4rem;
   }
-  p, .links a, .model-credit, li {
+  p, li {
     font-size: 1.2rem;
   }
   .overall {
@@ -459,6 +459,9 @@ p {
 }
 
 @media (min-width: 1050px) {
+  .model-credit, .links a {
+    font-size: 1.2rem;
+  }
   .line {
     left: 0.6%;
   }
